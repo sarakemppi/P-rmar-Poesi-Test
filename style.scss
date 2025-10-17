@@ -1,0 +1,58 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: $font;
+    color: $text-color;
+    background-color: $blue;
+    margin: 0;
+    padding: 2rem;
+}
+
+
+
+.profile-card {
+    @include card;
+    text-align: center;
+    width: 260px;
+    margin: 40px auto;
+
+
+
+    img {
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    h2 {
+        font-family: $title-font;
+        font-size: 1.35rem;
+        margin: 0 0 .35rem 0;
+        color: $liquorice;
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: color.scale($primary-color, $lightness: -15%);
+        }
+    }
+}
