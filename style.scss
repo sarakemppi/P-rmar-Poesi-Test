@@ -56,3 +56,83 @@ body {
         }
     }
 }
+
+main {
+    background-image: url('/assets/joshua-bartell-6vvIBTvL90A-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+.month-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c05b;
+    width: 25rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.author-month {
+    margin-top: 1rem;
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.author-img {
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin: 1rem;
+        width: 70%;
+        border-radius: 50%;
+        border: 5px solid rgb(106, 66, 17);
+    }
+}
+
+.author-name {
+    margin-bottom: 1rem;
+}
+
+.book-box {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c05b;
+    width: 25rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.book-month {
+    margin-top: 1rem;
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.book-img {
+    display: flex;
+    flex-wrap: wrap;
+
+    .book-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+    }
+}
