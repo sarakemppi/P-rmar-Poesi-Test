@@ -1,6 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
-@use "sass:color";
+
 
 
 
@@ -54,7 +54,8 @@ body {
         transition: 0.3s;
 
         &:hover {
-            background-color: color.scale($primary-color, $lightness: -15%);
+       background-color: darken($primary-color, 15%);
+
         }
     }
 }
