@@ -2,11 +2,10 @@
   .header {
     padding: 10px;
   }
-  }
-
+}
 
 .search {
-    --padding: 14px;
+  --padding: 14px;
   width: max-content;
   min-width: 300px;
   width: 300px;
@@ -21,15 +20,11 @@
   height: auto;
   transition: box-shadow 0.25s;
   gap: 10px;
-  
-  
 }
 
 .search:focus-within {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
 }
-
-
 
 /* Texten i sökfältet */
 
@@ -42,10 +37,8 @@
   border: none;
   background: transparent;
   flex: 1;
-  z-index: 1;;
-
+  z-index: 1;
 }
-
 
 .search-input::placeholder,
 .search-icon {
@@ -57,37 +50,31 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0 20px;
-  
 }
 
 .header-content {
   position: relative;
-
 }
 
-  .header-content img {
-    width: 100%;
-    border-radius: 0;
-  }
+.header-content img {
+  width: 100%;
+  border-radius: 0;
+}
 
-  .search {
-    /* width: 50%; */
-    margin: 10px left;
-    border-radius: 20px;
-    max-width: 300px;
-  
-    
-  }
+.search {
+  /* width: 50%; */
+  margin: 10px left;
+  border-radius: 20px;
+  max-width: 300px;
+}
 
-  .search-input {
-    font-size: 14px;
-  }
-  
+.search-input {
+  font-size: 14px;
+}
 
+/*MENY */
 
-  /*MENY */
-
- body {
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -136,10 +123,6 @@ nav {
   }
 }
 
-
-
-
-
 .highlight {
   color: #b34700; /* byt till din accentfärg */
   /* font-weight: 600; Tjockleken på texten */
@@ -154,12 +137,17 @@ nav {
   z-index: 2;
   /* white-space: nowrap; */
   font-size: 14px;
-  
 }
 
 @keyframes blink {
-  0%, 50% { border-color: #b34700; }
-  51%, 100% { border-color: transparent; }
+  0%,
+  50% {
+    border-color: #b34700;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
 }
 
 .search-wrapper {
@@ -169,7 +157,6 @@ nav {
   justify-content: flex-end;
 }
 
-
 .box {
   border: 1px solid black;
   padding: 10px;
@@ -178,13 +165,11 @@ nav {
 
 .box {
   background-color: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: block;
   height: auto;
   border: 1px solid black;
-
 }
-
 
 .book-box {
   width: 120px;
