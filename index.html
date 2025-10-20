@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -22,79 +26,93 @@
     </style>
   </head>
 
-  <body class="font-sans bg-[#e8e3dc] text-[#333]">
-    <!-- HEADER -->
-    <header class="bg-[#bcaa99] text-[#593936] py-4">
-      <section
-        class="flex items-center justify-between md:justify-center max-w-5xl mx-auto h-[60px]"
-      >
-        <!-- LOGO -->
-        <h1 class="text-3xl font-title">PÄRMAR & POESI</h1>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <img src="P&Pheader4.png" alt="Header-bild" class="header-img" />
+      </div>
 
-        <!-- SÖKRUTA -->
-        <form
-          action="#"
-          method="get"
-          class="hidden md:flex items-center absolute right-4"
-        >
-          <input
-            type="text"
-            placeholder="Sök..."
-            class="border border-[#1a1110] rounded px-3 py-1 w-[140px] focus:w-[200px] transition-all duration-300 outline-none bg-[#e8e3dc]"
-          />
-          <button type="submit" class="ml-2 text-lg">🔍</button>
+      <div class="search-wrapper">
+        <form class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="Sök efter" />
+          <span id="changing-word" class="highlight"></span>
         </form>
-      </section>
-
-      <!-- NAV -->
-      <nav class="relative flex justify-center mt-3">
-        <!-- Checkbox för mobilmeny -->
-        <input id="menu-toggle" type="checkbox" class="peer hidden" />
-
-        <!-- Hamburgerikon (bara i mobilvy) -->
-        <label
-          for="menu-toggle"
-          class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
-          aria-label="Öppna meny"
-        >
-          ☰
-        </label>
-
-        <!-- Meny -->
-        <ul
-          class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right bg-[#d8cfc3] shadow-lg z-50 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8"
-        >
-          <li>
-            <a href="#" class="block px-4 py-2 hover:underline">Boknyheter</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:underline">Evenemang</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:underline">Sortiment</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:underline">Om oss</a>
-          </li>
-        </ul>
-      </nav>
+      </div>
     </header>
 
-    <!-- MAIN -->
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Köpa biljetter</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
 
-    <main>
-      <section class="grid" aria-label="Profiler">
-        <article class="profile-card">
-          <img
-            src="https://randomuser.me/api/portraits/women/25.jpg"
-            alt="Profilbild på en kvinna som ler"
-          />
-          <h2>Rachel Richter</h2>
-          <p>Frontend / UX / UI</p>
-          <a class="btn" href="#">Följ</a>
-        </article>
-      </section>
-    </main>
+    <script>
+      const words = [
+        "noveller",
+        "deckare",
+        "klassiker",
+        "poesi",
+        "barnböcker",
+        "fantasy",
+        "biografier",
+        "romaner",
+      ];
+
+      const element = document.getElementById("changing-word");
+      const searchInput = document.querySelector(".search-input");
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+      let typingInterval;
+      let typingPaused = false;
+
+      function type() {
+        const currentWord = words[wordIndex];
+
+        if (!deleting) {
+          element.textContent = currentWord.substring(0, charIndex + 1);
+          charIndex++;
+
+          if (charIndex === currentWord.length) {
+            deleting = true;
+            setTimeout(type, 1500);
+            return;
+          }
+        } else {
+          element.textContent = currentWord.substring(0, charIndex - 1);
+          charIndex--;
+
+          if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        }
+
+        const speed = deleting ? 60 : 100;
+        typingInterval = setTimeout(type, speed);
+      }
+
+      type();
+
+      searchInput.addEventListener("input", function () {
+        if (!typingPaused) {
+          clearTimeout(typingInterval);
+          typingPaused = true;
+          element.textContent = "";
+        }
+      });
+
+      searchInput.addEventListener("blur", function () {
+        if (searchInput.value === "") {
+          typingPaused = false;
+          type();
+        }
+      });
+    </script>
     <footer id="footer">
       <section class="footer-container">
         <section class="icons">

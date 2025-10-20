@@ -1,17 +1,186 @@
-/* Error: Top-level selectors may not contain the parent selector "&".
- *    ,
- * 97 | &:hover {
- *    | ^
- *    '
- *   style.scss 97:1  root stylesheet */
+@media (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+.search {
+  --padding: 14px;
+  width: max-content;
+  min-width: 300px;
+  width: 300px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 20px;
+  background: #f6f6f6;
+  align-self: flex-end;
+  margin-top: 8px;
+  height: auto;
+  transition: box-shadow 0.25s;
+  gap: 10px;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Texten i sökfältet */
+
+.search-input {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  flex: 1;
+  z-index: 1;
+}
+
+.search-input::placeholder,
+.search-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.header-content {
+  position: relative;
+}
+
+.header-content img {
+  width: 100%;
+  border-radius: 0;
+}
+
+.search {
+  /* width: 50%; */
+  margin: 10px left;
+  border-radius: 20px;
+  max-width: 300px;
+}
+
+.search-input {
+  font-size: 14px;
+}
+
+/*MENY */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Centrera navigeringen */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: none;
+  padding: 15px 0;
+}
+
+/* Styla listan */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Avstånd mellan länkar */
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+/* Styla länkarna korrekt */
+.menu li a {
+  text-decoration: none;
+  color: burlywood;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Hover-effekt */
+.menu li a:hover {
+  color: #ff8800;
+}
+
+/*  Mobilanpassning */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+}
+
+.highlight {
+  color: #b34700; /* byt till din accentfärg */
+  /* font-weight: 600; Tjockleken på texten */
+  border-right: 2px solid #b34700; /* "blinkande markör" */
+  /* padding-right: 1px; */
+  animation: blink 0.8s infinite;
+  position: absolute;
+  left: 125px;
+  top: 44.5%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+  /* white-space: nowrap; */
+  font-size: 14px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: #b34700;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+.search-wrapper {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px; /* Valfritt avstånd */
+  justify-content: flex-end;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.box {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 97 \2502  &:hover {\d\a    \2502  ^\a    \2575 \a   style.scss 97:1  root stylesheet';
+  height: auto;
+  border: 1px solid black;
+}
+
+.book-box {
+  width: 120px;
+  border: 1px solid black;
+  padding: 10px;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+}
+
+.book-box img {
+  width: 100%;
+  height: auto;
 }
