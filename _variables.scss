@@ -1,7 +1,26 @@
-$gunmetal: #2A3439;
-$roseebony: #593936;
-$card-bg: #BCAA99;
-$page-bg: #E8E3DC;
 
+
+/* Bas */
+$gunmetal:   #2A3439;   // mörk text
+$roseebony:  #593936;   // accent/knapp
+$khaki:      #BCAA99;   // header/element
+$alabaster:  #E8E3DC;   // ljus bakgrund
+
+/* Footer */
+$footer-bg:   #6B705C;
+$footer-text: $alabaster;
+
+/* Pontus main*/
+$glass-bg:        rgba(232, 227, 220, 0.45); // ljus “glas”-bakgrund
+$accent-brown:    rgb(106, 66, 17);          // ram runt författarbild
+$bg-text-on-wood: #233;                      // text på bakgrunden
+
+/* Övrigt */
 $radius: 0.6rem;
-$font: Gravitas one, Arial, Helvetica;
+$font: "Gravitas One", Arial, Helvetica, sans-serif;
+
+/* Alias som style.scss använder */
+$text-color:    $gunmetal;
+$primary-color: $roseebony;
+$title-font:    "Gravitas One", serif;
+

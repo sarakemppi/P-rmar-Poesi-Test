@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* Bas */
+/* Footer */
+/* Pontus main*/
+/* Övrigt */
+/* Alias som style.scss använder */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gravitas One", Arial, Helvetica, sans-serif;
+  color: #2A3439;
+  background-color: #E8E3DC;
+  margin: 0;
+  padding: 2rem;
+}
+
+.profile-card {
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  text-align: center;
+  width: 260px;
+  margin: 40px auto;
+}
+.profile-card img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+}
+.profile-card h2 {
+  font-family: "Gravitas One", serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem 0;
+  color: #593936;
+}
+.profile-card button {
+  background-color: #593936;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.profile-card button:hover {
+  background-color: rgb(75.65, 48.45, 45.9);
+}
+
+/* PONTUS MAIN */
+main {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/joshua-bartell-6vvIBTvL90A-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #233;
+}
+
+.month-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(232, 227, 220, 0.45);
+  width: 25rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.author-month {
+  margin-top: 1rem;
+}
+.author-month h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.author-img {
+  display: flex;
+  justify-content: center;
+}
+.author-img img {
+  margin: 1rem;
+  width: 70%;
+  border-radius: 50%;
+  border: 5px solid rgb(106, 66, 17);
+}
+
+.author-name {
+  margin-bottom: 1rem;
+}
+
+.book-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(232, 227, 220, 0.45);
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.book-month {
+  margin-top: 1rem;
+}
+.book-month h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.book-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+  max-width: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.book-info:hover {
+  transform: scale(1.05);
+}
+
+.book-info img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.book-info p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+footer {
+  background-color: #6B705C;
+  color: #E8E3DC;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  gap: 2rem;
+}
+footer .footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+footer .footer-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #E8E3DC;
+  border-bottom: 1px solid rgba(232, 227, 220, 0.3);
+  padding-bottom: 0.3rem;
+}
+footer .footer-column p, footer .footer-column li, footer .footer-column a {
+  color: #E8E3DC;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(232, 227, 220, 0.3);
+  padding-top: 1rem;
+  opacity: 0.9;
+}
+
+/* Footer: stapla kolumner på små skärmar */
+@media (max-width: 600px) {
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

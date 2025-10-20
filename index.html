@@ -8,7 +8,8 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
+
 
     <style>
         .font-title {
@@ -23,7 +24,11 @@
 
         <section class="flex items-center justify-between md:justify-center max-w-5xl mx-auto h-[60px]">
             <!-- LOGO -->
-            <h1 class="text-3xl font-title">PÄRMAR & POESI</h1>
+            <h1 class="text-3xl font-title">
+  <a href="index.html" class="hover:underline">PÄRMAR & POESI</a>
+</h1>
+
+
 
             <!-- SÖKRUTA -->
             <form action="#" method="get" class="hidden md:flex items-center absolute right-4">
@@ -46,74 +51,97 @@
             </label>
 
             <!-- Meny -->
-            <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right bg-[#d8cfc3] shadow-lg z-50
-                 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
-                <li><a href="#" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Evenemang</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Sortiment</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Om oss</a></li>
-            </ul>
+           <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right
+           md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
+            <li><a href="boknyheter.html" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
+            <li><a href="evenemang.html"  class="block px-4 py-2 hover:underline">Evenemang</a></li>
+            <li><a href="sortiment.html"  class="block px-4 py-2 hover:underline">Sortiment</a></li>
+            <li><a href="om-oss.html"     class="block px-4 py-2 hover:underline">Om oss</a></li>
+</ul>
+
         </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-- MAIN - PONTUS KOD -->
 
-    <main>
-        <section class="grid" aria-label="Profiler">
-            <article class="profile-card">
-                <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Profilbild på en kvinna som ler">
-                <h2>Rachel Richter</h2>
-                <p>Frontend / UX / UI</p>
-                <a class="btn" href="#">Följ</a>
-            </article>                                      
+   
+<main>
+  <section class="month-boxes" aria-label="Startsida">
+
+    <section class="author-box">
+      <section class="author-month">
+        <h2>Månadens författare</h2>
+      </section>
+
+      <section class="author-img">
+     <img src="https://placehold.co/600x600?text=Författare" alt="Månadens författare">
+      </section>
+
+      <section class="author-name">
+        <p>George R.R. Martin</p>
+      </section>
+    </section>
+
+    <section class="book-box">
+      <section class="book-month">
+        <h2>Månadens böcker</h2>
+      </section>
+
+      <section class="book-img">
+        <section class="book-info">
+          <img src="https://placehold.co/300x420?text=Bok" alt="Månadens bok">
+          <p>Harry Potter</p>
         </section>
-
-        <section class="author-box">
-
-                <section class="author-month">
-                    <h2>Månadens författare</h2>
-                </section>
-                <section class="author-img">
-                    <img src="/assets/Portrait_photoshoot_at_Worldcon_75,_Helsinki,_before_the_HugoAwards–_George_R._R._Martin.jpg"
-                        alt="#">
-                </section>
-                <section class="author-name">
-                    <p>George R.R. Martin</p>
-                </section>
-
-            </section>
-            <section class="book-box">
-                <section class="book-month">
-                    <h2>Månadens böcker</h2>
-                </section>
-                <section class="book-img">
-                    <section class="book-info">
-                        <img src="/assets/7_US-Books_DHallows.webp" alt="#">
-                        <p>Harry Potter</p>
-                    </section>
-                    <section class="book-info">
-                        <img src="/assets/7_US-Books_DHallows.webp" alt="#">
-                        <p>Harry Potter</p>
-                    </section>
-                    <section class="book-info">
-                        <img src="/assets/7_US-Books_DHallows.webp" alt="#">
-                        <p>Harry Potter</p>
-                    </section>
-                    <section class="book-info">
-                        <img src="/assets/7_US-Books_DHallows.webp" alt="#">
-                        <p>Harry Potter</p>
-                    </section>
-                </section>
-            </section>
+        <section class="book-info">
+         <img src="https://placehold.co/300x420?text=Bok" alt="Månadens bok">
+          <p>Harry Potter</p>
         </section>
-    </main>
+        <section class="book-info">
+          <img src="https://placehold.co/300x420?text=Bok" alt="Månadens bok">
+          <p>Harry Potter</p>
+        </section>
+        <section class="book-info">
+       <img src="https://placehold.co/300x420?text=Bok" alt="Månadens bok">
+          <p>Harry Potter</p>
+        </section>
+      </section>
+    </section>
 
-    </main>
+  </section>
+</main>
 
-    <footer>
 
+<footer class="footer">
+  <section class="footer-container">
 
-    </footer>
+    <section class="footer-column">
+      <h3>Kontakt</h3>
+      <p>Diagongränden, Göteborg</p>
+      <p>+46 736 72 92 42</p>
+    </section>
+
+    <section class="footer-column">
+      <h3>Sociala Medier</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tiktok</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-column">
+      <h3>Vanliga frågor</h3>
+      <p><a href="#">Läs våra FAQ här</a></p>
+    </section>
+
+  </section>
+
+  <section class="footer-bottom">
+    <p>&copy; 2025 Pärmar & Poesi</p>
+  </section>
+</footer>
+
 </body>
 
 </html>
