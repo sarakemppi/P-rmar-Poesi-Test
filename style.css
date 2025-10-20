@@ -148,7 +148,7 @@ nav {
   animation: blink 0.8s infinite;
   position: absolute;
   left: 125px;
-  top: 44.5%;
+  top: 55.9%;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 2;
