@@ -1,109 +1,130 @@
 <!DOCTYPE html>
 <html lang="sv">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pärmar & Poesi – Header med sök</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <style>
-        .font-title {
-            font-family: "Gravitas One", system-ui, serif;
-        }
+      .font-title {
+        font-family: "Gravitas One", system-ui, serif;
+      }
     </style>
-</head>
+  </head>
 
-<body class="font-sans bg-[#e8e3dc] text-[#333]">
+  <body class="font-sans bg-[#e8e3dc] text-[#333]">
     <!-- HEADER -->
     <header class="bg-[#bcaa99] text-[#593936] py-4">
+      <section
+        class="flex items-center justify-between md:justify-center max-w-5xl mx-auto h-[60px]"
+      >
+        <!-- LOGO -->
+        <h1 class="text-3xl font-title">PÄRMAR & POESI</h1>
 
-        <section class="flex items-center justify-between md:justify-center max-w-5xl mx-auto h-[60px]">
-            <!-- LOGO -->
-            <h1 class="text-3xl font-title">PÄRMAR & POESI</h1>
+        <!-- SÖKRUTA -->
+        <form
+          action="#"
+          method="get"
+          class="hidden md:flex items-center absolute right-4"
+        >
+          <input
+            type="text"
+            placeholder="Sök..."
+            class="border border-[#1a1110] rounded px-3 py-1 w-[140px] focus:w-[200px] transition-all duration-300 outline-none bg-[#e8e3dc]"
+          />
+          <button type="submit" class="ml-2 text-lg">🔍</button>
+        </form>
+      </section>
 
-            <!-- SÖKRUTA -->
-            <form action="#" method="get" class="hidden md:flex items-center absolute right-4">
-                <input type="text" placeholder="Sök..."
-                    class="border border-[#1a1110] rounded px-3 py-1 w-[140px] focus:w-[200px] transition-all duration-300 outline-none bg-[#e8e3dc]" />
-                <button type="submit" class="ml-2 text-lg">🔍</button>
-            </form>
-        </section>
+      <!-- NAV -->
+      <nav class="relative flex justify-center mt-3">
+        <!-- Checkbox för mobilmeny -->
+        <input id="menu-toggle" type="checkbox" class="peer hidden" />
 
+        <!-- Hamburgerikon (bara i mobilvy) -->
+        <label
+          for="menu-toggle"
+          class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
+          aria-label="Öppna meny"
+        >
+          ☰
+        </label>
 
-        <!-- NAV -->
-        <nav class="relative flex justify-center mt-3">
-            <!-- Checkbox för mobilmeny -->
-            <input id="menu-toggle" type="checkbox" class="peer hidden" />
-
-            <!-- Hamburgerikon (bara i mobilvy) -->
-            <label for="menu-toggle" class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
-                aria-label="Öppna meny">
-                ☰
-            </label>
-
-            <!-- Meny -->
-            <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right bg-[#d8cfc3] shadow-lg z-50
-                 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
-                <li><a href="#" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Evenemang</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Sortiment</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:underline">Om oss</a></li>
-            </ul>
-        </nav>
+        <!-- Meny -->
+        <ul
+          class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right bg-[#d8cfc3] shadow-lg z-50 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8"
+        >
+          <li>
+            <a href="#" class="block px-4 py-2 hover:underline">Boknyheter</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:underline">Evenemang</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:underline">Sortiment</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:underline">Om oss</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- MAIN -->
 
     <main>
-        <section class="grid" aria-label="Profiler">
-            <article class="profile-card">
-                <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Profilbild på en kvinna som ler">
-                <h2>Rachel Richter</h2>
-                <p>Frontend / UX / UI</p>
-                <a class="btn" href="#">Följ</a>
-            </article>
-        </section>
+      <section class="grid" aria-label="Profiler">
+        <article class="profile-card">
+          <img
+            src="https://randomuser.me/api/portraits/women/25.jpg"
+            alt="Profilbild på en kvinna som ler"
+          />
+          <h2>Rachel Richter</h2>
+          <p>Frontend / UX / UI</p>
+          <a class="btn" href="#">Följ</a>
+        </article>
+      </section>
     </main>
+    <footer id="footer">
+      <section class="footer-container">
+        <section class="icons">
+          <h3>Följ oss</h3>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-pinterest-square"></i>
+        </section>
+      </section>
 
+      <section class="logo-container">
+        <h1>P&amp;P</h1>
+      </section>
 
-    
-<footer
-        class="footer-container relative bg-cover bg-center text-gray-100"
-      >
-        <section class="footer-container">
-          <section class="logo-container">
-            <section class="icons">
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-instagram-square"></i>
-              <i class="fab fa-twitter-square"></i>
-              <i class="fab fa-pinterest-square"></i>
-            </section>
-            <figure class="logo">
-            <h1>LOGO</h1>
-            </figure>
-          </section>
-          <section class="info">
-            <i class="fas fa-map-marker-alt" data-text="xyz location"></i>
-            <i class="fas fa-phone-alt" data-text="+46660220684"></i>
-            <i class="fas fa-envelope" data-text="examp@gmail.com"></i>
-          </section>
+      <section class="letter">
+        <h3>Nyhetsbrev</h3>
+        <p>Ange din e-post för att få uppdateringar</p>
+        <input type="email" placeholder="E-mail" />
+        <button id="Submit">Skicka</button>
+      </section>
 
-          <section class="letter">
-            <!-- Jag kan inte targetta min h3
-           och p -->
-            <h3 id="news">newslatter</h3>
-            <p>enter your email for latest updates</p>
-            <!-- <form> -->
-            <input type="email" placeholder="E-mail" />
-            <button id="Submit">Submit</button>
-            <!-- </form> -->
-          </section>
-          <h4>&copy;2025 Pärmar &amp; Poesi</h4>
-        <!-- </section> -->
-      </footer>
-</body>
+      <section class="info">
+        <i class="fas fa-map-marker-alt" data-text="xyz location"></i>
+        <i class="fas fa-phone-alt" data-text="+46660220684"></i>
+        <i class="fas fa-envelope" data-text="examp@gmail.com"></i>
+      </section>
+      <p>
+        © <time datetime="2025">2025</time> <a href="#">Pärmar &amp; Poesi</a>
+      </p>
+    </footer>
+  </body>
 </html>
