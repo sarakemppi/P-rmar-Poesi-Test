@@ -54,10 +54,16 @@
 
 .header-content {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .header-content img {
   width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
   border-radius: 0;
 }
 
@@ -130,14 +136,15 @@ nav {
   /* padding-right: 1px; */
   animation: blink 0.8s infinite;
   position: absolute;
-  left: 125px;
-  top: 44.5%;
+  left: 130px;
+  top: 56%;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 2;
   /* white-space: nowrap; */
   font-size: 14px;
 }
+
 
 @keyframes blink {
   0%,
