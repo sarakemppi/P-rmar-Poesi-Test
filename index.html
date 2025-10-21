@@ -1,104 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pärmar & Poesi</title>
-  <link rel="stylesheet" href="style.css">
-  <link 
-    rel="stylesheet" 
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" 
-  />
-</head>
-Här är min commitade kod.
-<body>
-  <header class="header">
-    <div class="header-content">
-      <img src="P&Pheader4.png" alt="Header-bild" class="header-img">
-    </div>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pärmar & Poesi – Header med sök</title>
 
-    <div class="search-wrapper">
-      <form class="search">
-        <span class="search-icon material-symbols-outlined">search</span>
-        <input class="search-input" type="search" placeholder="Sök efter">
-        <span id="changing-word" class="highlight"></span>
-      </form>
-    </div>
-  </header>
-  
-
-  <nav>
-    <ul class="menu">
-      <li><a href="#">Hem</a></li>
-      <li><a href="#">Köpa biljetter</a></li>
-      <li><a href="#">Om oss</a></li>
-      <li><a href="#">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <script>
-    const words = [
-      "noveller",
-      "deckare",
-      "klassiker",
-      "poesi",
-      "barnböcker",
-      "fantasy",
-      "biografier",
-      "romaner"
-    ];
-
-    const element = document.getElementById("changing-word");
-    const searchInput = document.querySelector(".search-input");
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-    let typingInterval;
-    let typingPaused = false;
-
-    function type() {
-      const currentWord = words[wordIndex];
-
-      if (!deleting) {
-        element.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentWord.length) {
-          deleting = true;
-          setTimeout(type, 1500);
-          return;
-        }
-      } else {
-        element.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-          deleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      .font-title {
+        font-family: "Gravitas One", system-ui, serif;
       }
+    </style>
+  </head>
 
-      const speed = deleting ? 60 : 100;
-      typingInterval = setTimeout(type, speed);
-    }
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <img src="images/bg.jpg" alt="Header-bild" class="header-img" />
+      </div>
 
-    type();
+      <div class="search-wrapper">
+        <form class="search">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="Sök efter" />
+          <span id="changing-word" class="highlight"></span>
+        </form>
+      </div>
+    </header>
 
-    searchInput.addEventListener("input", function() {
-      if (!typingPaused) {
-        clearTimeout(typingInterval);
-        typingPaused = false;
-        element.textContent = "";
-      }
-    });
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Köpa biljetter</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
 
-    searchInput.addEventListener("blur", function() {
-      if (searchInput.value === "") {
-        typingPaused = true;
-        type();
-      }
-    });
+    <footer id="footer">
+      <section class="footer-container">
+        <section class="icons">
+          <h3>Följ oss</h3>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-pinterest-square"></i>
+        </section>
+      </section>
 
-  </script>
-</body>
+      <section class="logo-container">
+        <h1>P&amp;P</h1>
+      </section>
+
+      <section class="letter">
+        <h3>Nyhetsbrev</h3>
+        <p>Ange din e-post för att få uppdateringar</p>
+        <input type="email" placeholder="E-mail" />
+        <button id="Submit">Skicka</button>
+      </section>
+
+      <section class="info">
+        <i class="fas fa-map-marker-alt" data-text="xyz location"></i>
+        <i class="fas fa-phone-alt" data-text="+46660220684"></i>
+        <i class="fas fa-envelope" data-text="examp@gmail.com"></i>
+      </section>
+      <p>
+        © <time datetime="2025">2025</time> <a href="#">Pärmar &amp; Poesi</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
