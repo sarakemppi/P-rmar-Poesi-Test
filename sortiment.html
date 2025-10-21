@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Sortiment & kategorier – Pärmar & Poesi</title>
+<meta name="description" content="Utforska böcker inom olika kategorier hos Pärmar & Poesi - din lokala bokhandel!">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .font-title {
+            font-family: "Gravitas One", system-ui, serif;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#e8e3dc] text-[#333]">
+    <!-- HEADER -->
+    <header class="bg-[#bcaa99] text-[#593936] py-4">
+
+        <section class="flex items-center justify-between md:justify-center max-w-5xl mx-auto h-[60px]">
+            <!-- LOGO MED LÄNK TILL STARTSIDAN -->
+            <h1 class="text-3xl font-title">
+  <a href="index.html" class="hover:underline">PÄRMAR & POESI</a>
+</h1>
+
+
+            <!-- SÖKRUTA -->
+            <form action="#" method="get" class="hidden md:flex items-center absolute right-4">
+                <input type="text" placeholder="Sök..."
+                    class="border border-[#1a1110] rounded px-3 py-1 w-[140px] focus:w-[200px] transition-all duration-300 outline-none bg-[#e8e3dc]" />
+                <button type="submit" class="ml-2 text-lg">🔍</button>
+            </form>
+        </section>
+
+
+        <!-- NAV -->
+        <nav class="relative flex justify-center mt-3">
+            <!-- Checkbox för mobilmeny -->
+            <input id="menu-toggle" type="checkbox" class="peer hidden" />
+
+            <!-- Hamburgerikon (bara i mobilvy) -->
+            <label for="menu-toggle" class="block cursor-pointer text-3xl md:hidden absolute right-4 -top-[45px]"
+                aria-label="Öppna meny">
+                ☰
+            </label>
+
+            <!-- Meny -->
+           <ul class="hidden peer-checked:flex flex-col absolute top-[60px] right-0 w-[180px] text-right
+           md:flex md:flex-row md:static md:w-auto md:bg-transparent md:shadow-none md:gap-8">
+            <li><a href="boknyheter.html" class="block px-4 py-2 hover:underline">Boknyheter</a></li>
+            <li><a href="evenemang.html"  class="block px-4 py-2 hover:underline">Evenemang</a></li>
+            <li><a href="sortiment.html"  class="block px-4 py-2 hover:underline">Sortiment</a></li>
+            <li><a href="om-oss.html"     class="block px-4 py-2 hover:underline">Om oss</a></li>
+</ul>
+
+        </nav>
+    </header>
+
+    <!-- MAIN - PONTUS KOD -->
+
+   
+<main>
+  <section class="month-boxes" aria-label="Startsida">
+
+    <section class="author-box">
+      <section class="author-month">
+        <h2>Toppsäljare</h2>
+      </section>
+
+      <section class="author-img">
+     <img src="https://placehold.co/600x600?text=Harry Potter" alt="Harry Potter">
+      </section>
+
+      <section class="author-name">
+        <p>J.K Rowling</p>
+      </section>
+    </section>
+
+    <section class="book-box">
+      <section class="book-month">
+        <h2>Kategorier</h2>
+      </section>
+
+      <section class="book-img">
+        <section class="book-info">
+          <img src="https://placehold.co/300x420?text=Skönlitteratur" alt="Skönlitteratur">
+          <p>Skönlitteratur</p>
+        </section>
+        <section class="book-info">
+         <img src="https://placehold.co/300x420?text=Deckare" alt="Deckare">
+          <p>Deckare</p>
+        </section>
+        <section class="book-info">
+          <img src="https://placehold.co/300x420?text=Fantasy" alt="Fantasy">
+          <p>Fantasy</p>
+        </section>
+        <section class="book-info">
+       <img src="https://placehold.co/300x420?text=Biografier" alt="Biografier">
+          <p>Biografier</p>
+        </section>
+      </section>
+    </section>
+
+  </section>
+</main>
+
+
+<footer class="footer">
+  <section class="footer-container">
+
+    <section class="footer-column">
+      <h3>Kontakt</h3>
+      <p>Diagongränden, Göteborg</p>
+      <p>+46 736 72 92 42</p>
+    </section>
+
+    <section class="footer-column">
+      <h3>Sociala Medier</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tiktok</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-column">
+      <h3>Vanliga frågor</h3>
+      <p><a href="#">Läs våra FAQ här</a></p>
+    </section>
+
+  </section>
+
+  <section class="footer-bottom">
+    <p>&copy; 2025 Pärmar & Poesi</p>
+  </section>
+
+
+    </footer>
+</body>
+
+</html>
