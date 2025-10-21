@@ -57,5 +57,7 @@ searchInput.addEventListener("blur", function () {
   if (searchInput.value === "") {
     typingPaused = false;
     type();
+  } else {
+    typingPaused = true; 
   }
 });
