@@ -130,9 +130,12 @@ h3 {
   align-self: flex-end;
   justify-content: flex-end;
   padding-bottom: 0rem;
-  border: 2px solid black;
+  border: 5px solid hotpink;
+  // margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
   h3 {
-    padding-right: 1rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -141,9 +144,17 @@ h3 {
   flex-direction: row;
   gap: 0.5rem;
   justify-content: flex-end;
-  padding-bottom: 2rem;
-  padding-right: 1rem;
-  margin-top: 0.5rem;
+  // padding-bottom: 2rem;
+  // padding-right: 1rem;
+  margin-top: 0.07rem;
+
+  i {
+    font-size: 25px;
+    color: #cdb8fd;
+    &:hover {
+      color: aqua;
+    }
+  }
 }
 
 .letter {
@@ -159,9 +170,24 @@ h3 {
   }
 }
 
+#Submit {
+  border: 3px solid $golden;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  height: 2.2rem;
+  text-align: center;
+}
+
+.Send {
+  display: flex;
+  align-items: center;
+}
+
 input[type="email"] {
   width: 21rem; // bredden på fältet
-  height: 2rem;
+  height: 2.2rem;
   padding: 0.7rem 1rem;
   font-size: 0.7rem;
   border: 3px solid $golden;
@@ -184,6 +210,6 @@ input[type="email"] {
   }
 
   &:hover {
-    border-color: lighten($roseebony, 10%);
+    border-color: lighten(hotpink, 10%);
   }
 }

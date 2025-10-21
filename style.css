@@ -114,10 +114,12 @@ h3 {
   align-self: flex-end;
   justify-content: flex-end;
   padding-bottom: 0rem;
-  border: 2px solid black;
+  border: 5px solid hotpink;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
 .footer-container h3 {
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 .icons {
@@ -125,9 +127,14 @@ h3 {
   flex-direction: row;
   gap: 0.5rem;
   justify-content: flex-end;
-  padding-bottom: 2rem;
-  padding-right: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.07rem;
+}
+.icons i {
+  font-size: 25px;
+  color: #cdb8fd;
+}
+.icons i:hover {
+  color: aqua;
 }
 
 .letter {
@@ -141,9 +148,24 @@ h3 {
   align-self: start;
 }
 
+#Submit {
+  border: 3px solid #f6c57e;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  height: 2.2rem;
+  text-align: center;
+}
+
+.Send {
+  display: flex;
+  align-items: center;
+}
+
 input[type=email] {
   width: 21rem;
-  height: 2rem;
+  height: 2.2rem;
   padding: 0.7rem 1rem;
   font-size: 0.7rem;
   border: 3px solid #f6c57e;
@@ -162,7 +184,7 @@ input[type=email]:focus {
   background-color: white;
 }
 input[type=email]:hover {
-  border-color: rgb(120.7412587413, 77.3286713287, 73.2587412587);
+  border-color: rgb(255, 156, 205.5);
 }
 
 /*# sourceMappingURL=style.css.map */
