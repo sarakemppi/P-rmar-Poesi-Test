@@ -1,193 +1,190 @@
-@media (max-width: 600px) {
-  .header {
-    padding: 10px;
-  }
-}
-
-.search {
-  --padding: 14px;
-  width: max-content;
-  min-width: 300px;
-  width: 300px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  padding: var(--padding);
-  border-radius: 20px;
-  background: #f6f6f6;
-  align-self: flex-end;
-  margin-top: 8px;
-  height: auto;
-  transition: box-shadow 0.25s;
-  gap: 10px;
-}
-
-.search:focus-within {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-}
-
-/* Texten i sökfältet */
-
-.search-input {
-  font-size: 16px;
-  font-family: sans-serif;
-  color: #333;
-  margin-left: var(--padding);
-  outline: none;
-  border: none;
-  background: transparent;
-  flex: 1;
-  z-index: 1;
-}
-
-.search-input::placeholder,
-.search-icon {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 20px;
-}
-
-.header-content {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.header-content img {
-  width: 100%;
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-.search {
-  /* width: 50%; */
-  margin: 10px left;
-  border-radius: 20px;
-  max-width: 300px;
-}
-
-.search-input {
-  font-size: 14px;
-}
-
-/*MENY */
-
-body {
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-/* Centrera navigeringen */
-nav {
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Gravitas one, Arial, Helvetica;
+  color: #333;
+  background-color: #3b82f6;
+  margin: 0;
+}
+
+.profile-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  width: 260px;
+  margin: 40px auto;
+}
+.profile-card img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+}
+.profile-card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem 0;
+  color: #1a1110;
+}
+.profile-card npx sass --no-source-map style.scss style.css button {
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.i {
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* mittenkolumn */
+.logo-container h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row; /* eller column om du vill stapla */
+  justify-content: space-between; /* valfritt */
+  justify-self: flex-end;
+  align-items: center; /* centrerar innehållet vertikalt */
+  background-color: #e8e3dc;
+  color: rgb(2, 33, 23);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.logo-container {
   display: flex;
   justify-content: center;
-  background-color: none;
-  padding: 15px 0;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 5px dotted #f6c57e;
+  border-radius: 70%;
+  background-color: hsla(340, 53%, 17%, 0.796);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+.logo-container img {
+  width: 4rem;
+  height: 4rem;
 }
 
-/* Styla listan */
-.menu {
-  list-style: none;
+.footer-container {
   display: flex;
-  gap: 30px; /* Avstånd mellan länkar */
-  margin: 0 0 12px;
-  padding: 0;
-}
-
-/* Styla länkarna korrekt */
-.menu li a {
-  text-decoration: none;
-  color: burlywood;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-/* Hover-effekt */
-.menu li a:hover {
-  color: #ff8800;
-}
-
-/*  Mobilanpassning */
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  nav {
-    padding: 20px 0;
-  }
-}
-
-.highlight {
-  color: #b34700; /* byt till din accentfärg */
-  /* font-weight: 600; Tjockleken på texten */
-  border-right: 2px solid #b34700; /* "blinkande markör" */
-  /* padding-right: 1px; */
-  animation: blink 0.8s infinite;
-  position: absolute;
-  left: 130px;
-  top: 56%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  z-index: 2;
-  /* white-space: nowrap; */
-  font-size: 14px;
-}
-
-
-@keyframes blink {
-  0%,
-  50% {
-    border-color: #b34700;
-  }
-  51%,
-  100% {
-    border-color: transparent;
-  }
-}
-
-.search-wrapper {
-  position: relative;
-  margin-left: auto;
-  margin-right: 20px; /* Valfritt avstånd */
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
   justify-content: flex-end;
+  padding-bottom: 0rem;
+  border: 5px solid hotpink;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+.footer-container h3 {
+  padding-right: 0.5rem;
 }
 
-.box {
-  border: 1px solid black;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.box {
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  display: block;
-  height: auto;
-  border: 1px solid black;
-}
-
-.book-box {
-  width: 120px;
-  border: 1px solid black;
-  padding: 10px;
+.icons {
+  display: flex;
   flex-direction: row;
-  text-align: center;
-  background-color: white;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.07rem;
+}
+.icons i {
+  font-size: 25px;
+  color: #cdb8fd;
+}
+.icons i:hover {
+  color: aqua;
 }
 
-.book-box img {
-  width: 100%;
-  height: auto;
+.letter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
 }
+.letter p {
+  font-size: 1rem;
+  align-self: start;
+}
+
+#Submit {
+  border: 3px solid #f6c57e;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  height: 2.2rem;
+  text-align: center;
+}
+
+.Send {
+  display: flex;
+  align-items: center;
+}
+
+input[type=email] {
+  width: 21rem;
+  height: 2.2rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  border: 3px solid #f6c57e;
+  border-radius: 6px;
+  background-color: rgba(255, 252, 252, 0.148);
+  color: black;
+  transition: all 0.25s ease;
+}
+input[type=email]::placeholder {
+  color: #cdb8fd;
+}
+input[type=email]:focus {
+  outline: none;
+  border-color: #6d5ca1;
+  box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
+  background-color: white;
+}
+input[type=email]:hover {
+  border-color: rgb(255, 156, 205.5);
+}
+
+/*# sourceMappingURL=style.css.map */

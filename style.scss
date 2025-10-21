@@ -64,24 +64,6 @@ body {
     // }
   }
 }
-#footer {
-  background: #222;
-  color: #fff;
-  margin-top: auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 1rem;
-}
 
 h3 {
   margin-bottom: 1rem;
@@ -94,9 +76,9 @@ h3 {
   cursor: pointer;
 }
 
-&:hover {
-  color: #e4b5d8;
-}
+// &:hover {
+//   color: #e4b5d8;
+// }
 
 /* mittenkolumn */
 .logo-container h1 {
@@ -104,51 +86,130 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* höger kolumn */
-.letter {
+#footer {
+  display: flex;
+  flex-direction: row; /* eller column om du vill stapla */
+  justify-content: space-between; /* valfritt */
+  justify-self: flex-end;
+  align-items: center; /* centrerar innehållet vertikalt */
+  background-color: $page-bg;
+  color: rgb(2, 33, 23);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  // padding: 2rem;
+  // padding: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 5px dotted $golden;
+  border-radius: 70%;
+  background-color: hsla(340, 53%, 17%, 0.796);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-
-  input {
-    width: 80%;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 4px;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 0rem;
+  border: 5px solid hotpink;
+  // margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  h3 {
+    padding-right: 0.5rem;
   }
+}
 
-  button {
-    background: #e4b5d8;
-    color: #222;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  // padding-bottom: 2rem;
+  // padding-right: 1rem;
+  margin-top: 0.07rem;
 
+  i {
+    font-size: 25px;
+    color: #cdb8fd;
     &:hover {
-      background: #fff;
+      color: aqua;
     }
   }
 }
 
-/* kontaktinfo längst ner */
-.info {
-  grid-column: 1 / -1;
+.letter {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  // border: 3px solid hotpink;
 
-  i {
-    font-size: 1.3rem;
+  p {
+    font-size: 1rem;
+    align-self: start;
   }
 }
 
-#footer p {
-  grid-column: 1 / -1;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #bbb;
+#Submit {
+  border: 3px solid $golden;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  height: 2.2rem;
+  text-align: center;
+}
+
+.Send {
+  display: flex;
+  align-items: center;
+}
+
+input[type="email"] {
+  width: 21rem; // bredden på fältet
+  height: 2.2rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  border: 3px solid $golden;
+  border-radius: 6px;
+  background-color: rgba(255, 252, 252, 0.148);
+  color: black;
+
+  // gör den mjukare vid interaktion
+  transition: all 0.25s ease;
+
+  &::placeholder {
+    color: #cdb8fd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #6d5ca1;
+    box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
+    background-color: white;
+  }
+
+  &:hover {
+    border-color: lighten(hotpink, 10%);
+  }
 }
