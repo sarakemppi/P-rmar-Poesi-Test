@@ -92,15 +92,35 @@ h3 {
   justify-content: space-between; /* valfritt */
   justify-self: flex-end;
   align-items: center; /* centrerar innehållet vertikalt */
-  background-color: #74649c;
-  color: aquamarine;
-  width: 100%;
-  margin: 0;
+  background-color: $page-bg;
+  color: rgb(2, 33, 23);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  // padding: 2rem;
   // padding: 2rem;
 }
 
 .logo-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 5px dotted $golden;
+  border-radius: 70%;
+  background-color: hsla(340, 53%, 17%, 0.796);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .footer-container {
@@ -109,8 +129,8 @@ h3 {
   align-items: center;
   align-self: flex-end;
   justify-content: flex-end;
-  padding: 0.5rem;
-
+  padding-bottom: 0rem;
+  border: 2px solid black;
   h3 {
     padding-right: 1rem;
   }
@@ -127,5 +147,43 @@ h3 {
 }
 
 .letter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
+  // border: 3px solid hotpink;
+
+  p {
+    font-size: 1rem;
+    align-self: start;
+  }
+}
+
+input[type="email"] {
+  width: 21rem; // bredden på fältet
+  height: 2rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  border: 3px solid $golden;
+  border-radius: 6px;
+  background-color: rgba(255, 252, 252, 0.148);
+  color: black;
+
+  // gör den mjukare vid interaktion
+  transition: all 0.25s ease;
+
+  &::placeholder {
+    color: #cdb8fd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #6d5ca1;
+    box-shadow: 0 0 5px rgba(109, 92, 161, 0.4);
+    background-color: white;
+  }
+
+  &:hover {
+    border-color: lighten($roseebony, 10%);
+  }
 }
